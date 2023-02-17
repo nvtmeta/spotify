@@ -31,7 +31,7 @@ const Player = ({
 
   return (
     <audio
-      src="https://tainhacmienphi.biz/get/song/api/2616"
+      src={activeSong.href}
       ref={ref}
       loop={repeat}
       onEnded={onEnded}

@@ -29,7 +29,8 @@ export const shazamCoreApi = createApi({
       query: (artistId) => `v2/artists/details?artist_id=${artistId}`,
     }),
     getSongDetails: builder.query({
-      query: ({ songid }) => `v1/tracks/details?track_id=${songid}`,
+      query: (songid) =>
+        `/spotify_single_track?url='https://open.spotify.com/track/${songid}'`,
     }),
     getSongRelated: builder.query({
       query: ({ songid }) => `v1/tracks/related?track_id=${songid}`,
